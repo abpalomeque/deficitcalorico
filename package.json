@@ -1,1 +1,9 @@
-{"name":"ritmo-personal","private":true,"type":"module","scripts":{"dev":"python3 -m http.server 4173 --directory web","test":"node --test tests/*.test.js"}}
+{
+  "name": "ritmo-personal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 4173",
+    "test": "node --test tests/*.test.js"
+  }
+}
