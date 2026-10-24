@@ -22,5 +22,5 @@ export function personalRecords(data) {
   }
   return [...map.values()];
 }
-export const encode = data => btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify(data,null,2))));
+export const encode = data => btoa(Array.from(new TextEncoder().encode(JSON.stringify(data,null,2)), byte => String.fromCharCode(byte)).join(''));
 export const decode = content => validate(JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(content.replace(/\s/g,'')), c=>c.charCodeAt(0)))));
